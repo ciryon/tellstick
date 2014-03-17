@@ -36,10 +36,9 @@ module TellStick
       RawAPI.supported_methods.key cmd
     end
 
-    # def dim_value
-    #   value = read_string RawAPI.last_sent_value(id)
-    #   value == '' ? nil : value
-    # end
+    def dim(level)
+      RawAPI.dim(id,level)
+    end
 
     def learn
       RawAPI.learn(id)
