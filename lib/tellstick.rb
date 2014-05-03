@@ -14,7 +14,7 @@ module TellStick
   end 
 
   def self.device_with_id device_id
-    found = self.devices.select { |device|  device.device_id == device_id  }
+    found = self.devices.select { |device|  device.id == device_id  }
     if found
       return found.first
     else
