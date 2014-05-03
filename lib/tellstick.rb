@@ -12,4 +12,14 @@ module TellStick
     end
     devices
   end 
+
+  def self.device_with_id device_id
+    found = self.devices.select { |device|  device.device_id == device_id  }
+    if found
+      return found.first
+    else
+      return nil
+    end
+  end
+
 end
